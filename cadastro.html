@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Resgate a Fauna</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
 .container {
   display: flex;
@@ -29,11 +30,21 @@
   margin: 20px;
   
 		}
+.item2{
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 50px;
+  
+		}
+  .box1{
+    border-bottom: 1px solid;
+  }
 	</style>
 </head>
 <body>
+  <div class="box1"><h1>Cadastro <i class="fa-solid fa-file" style="color: #1c8a26;"></i></h1></div> 
     <section class="container">
-      <h1>Cadastro</h1>     
+          
           <form class="item">
             <div class="content">
             <label for="firstname">Nome</label><br>
@@ -56,7 +67,7 @@
             <input type="password" id="confirmpassword" name="confirmpassword" required><br>
             <br> <!--quebra de linha-->
             <br>
-            <input type="submit" value="Enviar" class="item">
+            <input type="submit" value="Cadastrar" class="item2">
             </form>
 
           </div>
