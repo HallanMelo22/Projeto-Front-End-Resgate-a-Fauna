@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+  }
+  
+  .image-container {
+    flex: 40%;
+    display: flex;
+  }
+  
+  .content {
+    flex: 30%;
+    display: flex;
+    margin: 12px;
+    padding: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  
+  }
+  .item{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 20px;
+    
+          }
+  .item2{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 50px;
+    
+          }
+    .box1{
+      border-bottom: 1px solid;
+    }
