@@ -28,6 +28,7 @@ h1{
   
   .content {
     display: flex;
+    flex-wrap: wrap;
     flex: 30%;
     margin: 12px;
     padding: 20px;
@@ -37,33 +38,39 @@ h1{
   .item{
     display: flex;
     flex-wrap: nowrap;
-    margin: 20px;
     
           }
   label{
     margin-top: 15px;
     margin-bottom: 15px;
   }
-  .item2{
-    display: flex;
-    flex-wrap: nowrap;
-    margin: 50px;
-    
-          }
+
+  .item .item2:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+
+  }
+
   input{
     width: 220px;
     border: none;
+    font-weight:normal;
     border-bottom: 2px solid rgb(24, 138, 28);
+    outline: 0;
     }
     .item2{
       font-size: medium;
-      margin-right: 40px;
-      align-content: center;
+      display: flex;
+      flex-wrap:wrap;
+      margin: 100px;      
       color: #ffff;
-      width: 100px;
+      width: 130px;
       border-radius: 25px;
       padding: 13px;
-      background-color: rgb(24, 138, 28);
+      background: linear-gradient(to right, rgb(24, 138, 28) 39%, #062407 98%) ;
       border: 1px solid rgb(24, 138, 28) ;
+      transition: all 0.5s ease-in-out;
+
+
     }
   
