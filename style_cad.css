@@ -1,10 +1,28 @@
+*{
+  font-family: 'Kreon';
+  color:  rgb(24, 138, 28);
+
+
+
+}
 .container {
-    display: flex;
+    display: grid;
+    grid-column: auto;
   }
+h1{
+  margin: 34px;
+      border-bottom: 3px solid;
+      border-color: rgb(24, 138, 28);
+  font-weight: bold;
+  font-size: 40px;
+
+}
   
   .image-container {
-    flex: 40%;
-    display: flex;
+    display: grid;
+    grid-column: auto;
+
+    margin-top: 10px;
   }
   
   .content {
@@ -22,12 +40,23 @@
     margin: 20px;
     
           }
+  label{
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
   .item2{
     display: flex;
     flex-wrap: nowrap;
     margin: 50px;
     
           }
-    .box1{
-      border-bottom: 1px solid;
+  input{
+    width: 220px;
+    border: none;
+    border-bottom: 2px solid rgb(24, 138, 28);
     }
+    .item2{
+      margin-right: 20px;
+      border: none;
+    }
+  
