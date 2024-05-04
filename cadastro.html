@@ -4,36 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Resgate a Fauna</title>
-    <style>
-.container {
-  display: flex;
-}
-
-.image-container {
-  flex: 40%;
-  display: flex;
-}
-
-.content {
-  flex: 30%;
-  display: flex;
-  margin: 12px;
-  padding: 20px;
-  flex-direction: column;
-  flex-wrap: wrap;
-
-}
-.item{
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 20px;
-  
-		}
-	</style>
+    <link rel="stylesheet" href="./style_cad.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css2?family=Kreon:wght@300..700&display=swap' rel='stylesheet'>
 </head>
 <body>
-    <section class="container">
-      <h1>Cadastro</h1>     
+  <section class="container">
+
+    <div class="form-container">
+  <h1>Cadastro <i class="fa-solid fa-file" style="color: #1c8a26;"></i></h1>    
           <form class="item">
             <div class="content">
             <label for="firstname">Nome</label><br>
@@ -54,27 +33,20 @@
             <input type="email" id="email" name="email" required>
             <label for="confirmpassword">Confirmar Senha</label><br>
             <input type="password" id="confirmpassword" name="confirmpassword" required><br>
-            <br> <!--quebra de linha-->
+            <br> 
             <br>
-            <input type="submit" value="Enviar" class="item">
+              <input type="submit" value="Cadastrar" class="item2" href="/login.html">
             </form>
 
           </div>
-           
-            
-        
-        <div class="image-container">
-            <img src="/images/image-1.png" alt="Golfinho" style="width:auto;height:auto;">
-        </div>
+          </div>
+          <div class="image-container">
+            <img src="images/golfinhos_1.png" alt="Golfinho" style="width:45vw;height: 100vh;background-size: contain;     border-radius: 20px;">
+          </div>
+          
     </section>
     
+    
 </body>
-<!--<div class="item"></div>
-            <div class="item">Sobrenome</div>
-            <div class="item">Estado</div>
-            <div class="item">Cidade</div>
-            <div class="item">Data de Nasc.</div>
-            <div class="item">E-mail</div>
-            <div class="item">Senha</div>
-            <div class="item">Confirmar Senha</div>-->
+
 </html>
