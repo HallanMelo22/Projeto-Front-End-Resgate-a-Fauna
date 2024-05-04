@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kreon:wght@300..700&display=swap');
+
+* {
+  font-family: 'Kreon';
+}
+body {
+  margin: 0;
+}
+
+header {
+  background: linear-gradient(to right, #188a1c 0%, #062407 100%);
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+}
+
+.information{
+  display: flex;
+  padding-left: 10px;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.information a {
+  font-family: 'Kreon';
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.information img {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-size: contain;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+.menu ul {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  list-style: none;
+  margin-top: 500px;
+}
+
+
+.menu li:hover, button:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.click {
+  display: flex;
+  padding-right: 75px;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.click a {
+  font-family: 'Kreon';
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.click div {
+  flex-direction: column;
+  height: 20px;
+  border-left: 3px solid #ffffff;
+}
+.but-doacao {
+  font-size: medium;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  color: #ffff;
+  text-decoration: none;
+  width: 130px;
+  border-radius: 40px;
+  padding: 13px;
+  background: linear-gradient(to right, rgb(24, 138, 28) 39%, #062407 98%);
+  border: 1px solid rgb(24, 138, 28);
+  transition: all 0.5s ease-in-out;
+}
+section{
+  margin: 20px;
+
+}
+
+.direita {
+  display: flex;
+  padding-right: 75px;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+.but-envio{
+  font-size: medium;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  color: #ffff;
+  text-decoration: none;
+  width: 130px;
+  border-radius: 40px;
+  padding: 13px;
+  background: linear-gradient(to right, rgb(24, 138, 28) 39%, #062407 98%);
+  border: 1px solid rgb(24, 138, 28);
+  transition: all 0.5s ease-in-out;    
+}
