@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Kreon:wght@300..700&display=swap');
+
+* {
+  font-family: 'Kreon';
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(to right, #188a1c 0%, #062407 100%);
+  display: flex;
+  justify-content: space-between;
+  height: 13vh;
+
+}
+
+.information{
+  display: flex;
+  padding-left: 10px;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.information a {
+  font-family: 'Kreon';
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.information img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.nav{
+  float: left;
+  width: 100%;
+}
+
+ul{
+  list-style: none;
+  padding-left: 0;
+
+}
+
+li{
+  display: block;
+  float: left;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+
+li ul {
+  background: #188a1c;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 15rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+li ul li{
+  clear: both;
+  width: 28vw;
+}
+
+ul li:hover, ul li:focus-within{
+  background-color: #4CAF5C;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: 0.3s;
+}
+
+li a:hover{
+  color: green;
+}
+
+ul li:hover>ul, ul li:focus-within>ul, ul li ul:hover, ul li ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.click {
+  display: flex;
+  padding-right: 75px;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.click a {
+  font-family: 'Kreon';
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.click div {
+  flex-direction: column;
+  height: 20px;
+  border-left: 3px solid #ffffff;
+}
+.but-doacao {
+  font-size: medium;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  color: #ffff;
+  text-decoration: none;
+  width: 130px;
+  border-radius: 40px;
+  padding: 13px;
+  background: linear-gradient(to right, rgb(24, 138, 28) 39%, #062407 98%);
+  border: 1px solid rgb(24, 138, 28);
+  transition: all 0.5s ease-in-out;
+}
+section{
+  margin: 20px;
+
+}
+
+.direita {
+  display: flex;
+  padding-right: 75px;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+.but-envio{
+  font-size: medium;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  color: #ffff;
+  text-decoration: none;
+  width: 130px;
+  border-radius: 40px;
+  padding: 13px;
+  background: linear-gradient(to right, rgb(24, 138, 28) 39%, #062407 98%);
+  border: 1px solid rgb(24, 138, 28);
+  transition: all 0.5s ease-in-out;    
+}

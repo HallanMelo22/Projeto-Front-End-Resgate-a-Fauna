@@ -162,6 +162,7 @@ body{
   padding-left: 10px;
   color: #188A1C;
   font-family: 'Kreon';
+
 }
 
 .password{
@@ -190,15 +191,20 @@ body{
   font-family: 'Kreon';
 }
 
+.password:required{
+  color: green;
+}
+
 .botton input, a{
   display: flex;
   flex-direction: column;
   width: 12vw;
   height: 6vh;
-  background-image: linear-gradient(to right, #188A1C 39%, #062407 98%);
+  background: linear-gradient(to right, #188A1C 39%, #062407 98%);
   border-radius: 30px;
   margin-bottom: 25px;
   border: none;
+  transition: all 0.5s ease-in-out;
 }
 
 .enter {
@@ -207,6 +213,11 @@ body{
   justify-content: center;
   align-items: center;
   font-size: 15px;
+  cursor: pointer;
+}
+
+.enter:hover{
+  filter: brightness( 90% );
 }
 
 .cadastrar {
@@ -215,6 +226,10 @@ body{
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+
+.cadastrar:hover{
+  filter: brightness( 90% );
 }
 
 
