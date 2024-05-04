@@ -1,77 +1,77 @@
+
 *{
-  font-family: 'Kreon';
-  color:  rgb(24, 138, 28);
-
-
-
-}
-.form-container {
-  display: flex;
-  flex-direction: column;
-}
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;  }
-h1{
-  margin: 34px;
-      border-bottom: 3px solid;
-      border-color: rgb(24, 138, 28);
-  font-weight: bold;
-  font-size: 40px;
-
-}
+    font-family: 'Kreon';
+    color:  rgb(24, 138, 28);
   
-  .image-container {
-    margin-top: 10px;
+  
+  
   }
-  
-  .content {
+  .form-container {
     display: flex;
-    flex-wrap: wrap;
-    flex: 30%;
-    margin: 12px;
-    padding: 20px;
     flex-direction: column;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  }
+  h1{
+    margin: 34px;
+        border-bottom: 3px solid;
+        border-color: rgb(24, 138, 28);
+    font-weight: bold;
+    font-size: 40px;
   
   }
-  .item{
-    display: flex;
-    flex-wrap: nowrap;
     
-          }
-  label{
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-
-  .item .item2:hover {
-    cursor: pointer;
-    filter: brightness(90%);
-
-  }
-
-  input{
-    width: 220px;
-    border: none;
-    font-weight:normal;
-    border-bottom: 2px solid rgb(24, 138, 28);
-    outline: 0;
+    .image-container {
+      margin-top: 10px;
     }
-    .item2{
-      font-size: medium;
+    
+    .content {
       display: flex;
-      flex-wrap:wrap;
-      margin: 100px;      
-      color: #ffff;
-      width: 130px;
-      text-decoration: none;
-      border-radius: 25px;
-      padding: 13px;
-      background: linear-gradient(to right, rgb(24, 138, 28) 39%, #062407 98%) ;
-      border: 1px solid rgb(24, 138, 28) ;
-      transition: all 0.5s ease-in-out;
-
-
+      flex-wrap: wrap;
+      flex: 30%;
+      margin: 12px;
+      padding: 20px;
+      flex-direction: column;
+    
     }
+    .item{
+      display: flex;
+      flex-wrap: nowrap;
+      
+            }
+    label{
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  
+    .item .item2:hover {
+      cursor: pointer;
+      filter: brightness(90%);
+  
+    }
+  
+    input{
+      width: 220px;
+      border: none;
+      font-weight:normal;
+      border-bottom: 2px solid rgb(24, 138, 28);
+      outline: 0;
+      }
+      .item2{
+        font-size: medium;
+        display: flex;
+        flex-wrap:wrap;
+        margin: 100px;      
+        color: #ffff;
+        width: 130px;
+        border-radius: 25px;
+        padding: 13px;
+        background: linear-gradient(to right, rgb(24, 138, 28) 39%, #062407 98%) ;
+        border: 1px solid rgb(24, 138, 28) ;
+        transition: all 0.5s ease-in-out;
+      }
+      
+      
   
