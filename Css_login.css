@@ -33,7 +33,7 @@ body{
 }
 
 .slide img{
-  width: 900px;
+  width: 922px;
   height: 100vh;
   background-size: cover;
 }
@@ -93,7 +93,7 @@ body{
 .navigation-auto {
   position: absolute;
   width: 800px;
-  margin-top: 706.5px;
+  margin-top: 694.5px;
   display: flex;
   justify-content: center;
 }
@@ -162,7 +162,7 @@ body{
   padding-left: 10px;
   color: #188A1C;
   font-family: 'Kreon';
-
+  display: flex;
 }
 
 .password{
