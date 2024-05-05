@@ -225,3 +225,11 @@ select, textarea, #local, #date{
   margin-top: 13vh;
   border-left: 15px solid rgb(58, 119, 58)
 }
+
+.but-envio:hover{
+  cursor: pointer;
+  filter: brightness(90%);
+}
+.but-doacao:hover{
+  filter: brightness(90%);
+}
