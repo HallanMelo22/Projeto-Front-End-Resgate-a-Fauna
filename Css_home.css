@@ -8,6 +8,9 @@ body {
   margin: 0;
   padding: 0;
 }
+.pghome{
+  display: flex;
+}
 
 header {
   background: linear-gradient(to right, #188a1c 0%, #062407 100%);
@@ -17,6 +20,9 @@ header {
   position: fixed;   
   width: 100%;
   top: 0;
+}
+h1{
+  margin: 10px;
 }
 
 .information{
@@ -123,10 +129,11 @@ ul li:hover>ul, ul li:focus-within>ul, ul li ul:hover, ul li ul:focus {
   flex-wrap: wrap;
   margin: 10px;
   color: #ffff;
+  justify-content: center;  
   text-decoration: none;
-  width: 130px;
+  width: 250px;
   border-radius: 40px;
-  padding: 13px;
+  padding: 9px;
   background: linear-gradient(to right, rgb(24, 138, 28) 39%, #062407 98%);
   border: 1px solid rgb(24, 138, 28);
   transition: all 0.5s ease-in-out;
@@ -135,9 +142,30 @@ section{
   margin: 20px;
 
 }
+footer {
+  background: linear-gradient(to right, #188a1c 0%, #062407 100%);
+  flex-direction: column;
+  display: flex;
+  position:static;
+  justify-content: space-between;
+  height: 13vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Kreon';
+  color: #ffffff;
+  font-size: 18px;
+}
+
+
+.rodape{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .direita {
-  display: flex;
+  margin-left: 850px ;
+  right: 0;
   padding-right: 75px;
   flex-direction: row;
   align-items: center;
@@ -147,13 +175,52 @@ section{
   font-size: medium;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;  
+  align-items: center;
   margin: 10px;
   color: #ffff;
   text-decoration: none;
-  width: 130px;
+  width: 100px;
   border-radius: 40px;
   padding: 13px;
   background: linear-gradient(to right, rgb(24, 138, 28) 39%, #062407 98%);
   border: 1px solid rgb(24, 138, 28);
   transition: all 0.5s ease-in-out;    
+}
+img{
+  margin: 5px;
+}
+figcaption{
+  font-style: italic;
+}
+p{
+  margin-top: 15px;
+}
+main{
+  flex: 60%;
+}
+.form-denuncia{
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+}
+select, textarea, #local, #date{
+  padding: 5px;
+  width: 210px;
+  margin: 5px;
+  border-radius: 60px;
+  background-color: #d9d9d9;
+  opacity: 70%;
+  outline: 0;
+  border-color: 1px solid #d9d9d9;
+  color: #000000;
+}
+.denuncia-doacao{
+  display: flex;
+  flex-direction:column;
+  flex: 40%;
+  justify-content:flex-start;
+  align-items: center;
+  margin-top: 13vh;
+  border-left: 15px solid rgb(24, 138, 28);
 }
