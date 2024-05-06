@@ -2,19 +2,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
-    <link rel="stylesheet" href="./Css_home.css" >
+    />
+    <link rel="stylesheet" href="./Css_home.css" />
     <title>Home</title>
   </head>
-<body>
+
   <header>
     <div class="information">
-      <img src="./assets/img/logo.png" alt="logo">
+      <img src="./assets/img/logo.png" alt="logo" />
       <a href="#texto_pagina_home">Home</a>
       <a href="#quem-somos">Quem somos?</a>
 
@@ -51,6 +51,8 @@
       <a href="./cadastro.html">Cadastrar-se</a>
     </div>
   </header>
+  
+  <body>
     <div class="pghome">
     <main>
     <section id="texto_pagina_home">
@@ -69,7 +71,7 @@
             background-size: contain;
             border-radius: 20px;
           "
-        >
+        />
         <figcaption>Colaboradora de ONG ajudando animais.</figcaption>
       </figure>
       <div id="quem-somos">
@@ -145,7 +147,7 @@
             background-size: contain;
             border-radius: 20px;
           "
-        >
+        />
         <figcaption>Colaboradores do Projeto Tamar ajudando tartarugas.</figcaption>
       </figure>
 
@@ -189,7 +191,7 @@
             background-size: contain;
             border-radius: 20px;
           "
-        >
+        />
         <figcaption>Arara Canindé</figcaption>
       </figure>
 
@@ -222,7 +224,7 @@
             background-size: contain;
             border-radius: 20px;
           "
-        >
+        />
         <figcaption>Logo SUIPA</figcaption>
       </figure>
 
@@ -257,7 +259,7 @@
             background-size: contain;
             border-radius: 20px;
           "
-        >
+        />
         <figcaption>Logo Instituto Caramelo</figcaption>
       </figure>
 
@@ -292,7 +294,7 @@
             background-size: contain;
             border-radius: 20px;
           "
-        >
+        />
         <figcaption>Colaboradores da FMA ajudando um peixe-boi.</figcaption>
       </figure>
 
@@ -316,7 +318,7 @@
     <section class="denuncia">
       <h2 class="tit-2">Faça uma Denuncia:</h2>
 
-      <form class="form-denuncia">
+      <form class="form-denuncia" action="">
         <select name="ong" required="required">
           <option value="" disabled selected>Selecione uma ONG</option>
           <option value="Projeto Tamar">Projeto Tamar</option>
@@ -327,7 +329,7 @@
             Fundação Mamíferos Aquáticos
           </option>
         </select>
-        <br>
+        <br />
         <select name="problem" required="required">
           <option value="" disabled selected>Selecione um problema</option>
           <option value="Animal abandonado">Animal abandonado</option>
@@ -342,51 +344,51 @@
           </option>
           <option value="Outro problema">Outro problema</option>
         </select>
-        <br>
+        <br />
 
         <textarea placeholder="Descreva sobre..."></textarea>
-        <br>
+        <br />
         <input
           type="text"
           placeholder="Digite o local:"
           id="local"
           name="localidade"
           required
-        >
-        <br>
+        /><br />
         <input
           type="text"
           id="date"
           placeholder="Selecione a data do ocorrido"
           onfocus="this.type='date'"
           onblur="if (!this.value) this.type='text'"
+          id="date"
           name="date"
-        >
+        />
         <br>
-        <input class="but-envio" type="submit" value="Enviar">
+        <input class="but-envio" type="submit" value="Enviar" />
       </form>
     </section>
 
     <section class="doacao">
       <h2 class="tit-2">Faça uma Doação:</h2>
-      <a class="but-doacao" href="https://www.tamar.org.br" target="_blank">Projeto Tamar<br></a>
-      <a class="but-doacao" href="https://sosfauna.org.br" target="_blank">SOS Fauna<br></a>
-      <a class="but-doacao" href="https://www.suipa.org.br" target="_blank">SUIPA<br></a>
-      <a class="but-doacao" href="https://institutocaramelo.org/home" target="_blank">Instituto Caramelo<br></a>
-      <a class="but-doacao" href="https://mamiferosaquaticos.org.br" target="_blank">Fundação Mamíferos Marinhos<br ></a>
+      <a class="but-doacao" href="https://www.tamar.org.br" target="_blank">Projeto Tamar<br /></a>
+      <a class="but-doacao" href="https://sosfauna.org.br" target="_blank">SOS Fauna<br /></a>
+      <a class="but-doacao" href="https://www.suipa.org.br" target="_blank">SUIPA<br /></a>
+      <a class="but-doacao" href="https://institutocaramelo.org/home" target="_blank">Instituto Caramelo<br /></a>
+      <a class="but-doacao" href="https://mamiferosaquaticos.org.br" target="_blank">Fundação Mamíferos Marinhos<br /></a>
     </section>
   </nav>
 </div>
-<footer>
-  <div class="rodape">
-    <h5>Contatos:</h5>
-    <h5>Instagram: @protejaafauna</h5>
-    <h5>Email: ptj_afauna@gmail.com</h5>
-  </div>
-  <div class="direita">
-    <h5>Proteja a Fauna © 2024 - Todos os direitos reservados</h5>
-  </div>
-</footer>
-</body>
+  </body>
 
+  <footer>
+    <div class="rodape">
+      <h5>Contatos:</h5>
+      <h5>Instagram: @protejaafauna</h5>
+      <h5>Email: ptj_afauna@gmail.com</h5>
+    </div>
+    <div class="direita">
+      <h5>Proteja a Fauna © 2024 - Todos os direitos reservados</h5>
+    </div>
+  </footer>
 </html>

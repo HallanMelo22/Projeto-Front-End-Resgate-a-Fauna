@@ -23,12 +23,12 @@ header {
   top: 0;
 }
 h1{
-  margin: 10px;
+  margin: 0.625rem;
 }
 
 .information{
   display: flex;
-  padding-left: 10px;
+  padding-left: 0.625rem;
   flex-direction: row;
   align-items: center;
   gap: 2rem;
@@ -37,7 +37,7 @@ h1{
 .information a {
   font-family: 'Kreon';
   color: #ffffff;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: normal;
   text-decoration: none;
 }
@@ -105,7 +105,7 @@ ul li:hover>ul, ul li:focus-within>ul, ul li ul:hover, ul li ul:focus {
 
 .click {
   display: flex;
-  padding-right: 75px;
+  padding-right: 4.7rem;
   flex-direction: row;
   align-items: center;
   gap: 2rem;
@@ -114,33 +114,33 @@ ul li:hover>ul, ul li:focus-within>ul, ul li ul:hover, ul li ul:focus {
 .click a {
   font-family: 'Kreon';
   color: #ffffff;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: normal;
   text-decoration: none;
 }
 
 .click div {
   flex-direction: column;
-  height: 20px;
-  border-left: 3px solid #ffffff;
+  height: 1.25rem;
+  border-left: 0.2rem solid #ffffff;
 }
 .but-doacao {
   font-size: medium;
   display: flex;
   flex-wrap: wrap;
-  margin: 10px;
+  margin: 0.625rem;
   color: #ffff;
   justify-content: center;  
   text-decoration: none;
-  width: 250px;
-  border-radius: 40px;
-  padding: 9px;
+  width: 15.6rem;
+  border-radius: 2.5rem;
+  padding: 0.6rem;
   background: linear-gradient(to right, rgb(24, 138, 28) 39%, #062407 98%);
-  border: 1px solid rgb(24, 138, 28);
+  border: 0.06rem solid rgb(24, 138, 28);
   transition: all 0.5s ease-in-out;
 }
 section{
-  margin: 20px;
+  margin: 1.25rem;
 
 }
 footer {
@@ -148,11 +148,11 @@ footer {
   display: flex;
   justify-content: space-between;
   height: 13vh;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   font-family: 'Kreon';
   color: #ffffff;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 
@@ -165,7 +165,7 @@ footer {
 .direita {
   display: flex;
   align-items: end;
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
   letter-spacing: 0.15rem;
 }
 .but-envio{
@@ -174,24 +174,24 @@ footer {
   flex-wrap: wrap;
   justify-content: center;  
   align-items: center;
-  margin: 10px;
+  margin: 0.625rem;
   color: #ffff;
   text-decoration: none;
-  width: 100px;
-  border-radius: 40px;
-  padding: 13px;
+  width: 10rem;
+  border-radius: 2.5rem;
+  padding: 0.9rem;
   background: linear-gradient(to right, rgb(24, 138, 28) 39%, #062407 98%);
   border: 1px solid rgb(24, 138, 28);
   transition: all 0.5s ease-in-out;    
 }
 img{
-  margin: 5px;
+  margin: 0.3rem;
 }
 figcaption{
   font-style: italic;
 }
 p{
-  margin-top: 15px;
+  margin-top: 1rem;
 }
 main{
   flex: 60%;
@@ -205,15 +205,16 @@ main{
 
 
 .denuncia h2{
-  margin-bottom: 30px;
+  margin-bottom: 1.9rem;
 }
 select, textarea, #local, #date{
-  padding: 5px;
-  width: 210px;
-  margin: 5px;
-  border-radius: 60px;
+  padding: 0.3rem;
+  width: 13.2rem;
+  margin: 0.32rem;
+  border-radius: 3.75rem;
   background-color: #dedede;
   outline: 0;
+  border-color: 1px solid #d9d9d9;
   color: #000000;
 }
 .denuncia-doacao{
@@ -223,13 +224,11 @@ select, textarea, #local, #date{
   justify-content:flex-start;
   align-items: center;
   margin-top: 13vh;
-  border-left: 15px solid rgb(58, 119, 58)
+  border-left: 1rem solid rgb(58, 119, 58)
 }
 
-.but-envio:hover{
-  cursor: pointer;
-  filter: brightness(90%);
-}
-.but-doacao:hover{
-  filter: brightness(90%);
+.doacao{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
