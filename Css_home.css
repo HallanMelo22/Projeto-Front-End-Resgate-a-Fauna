@@ -23,15 +23,15 @@ header {
   top: 0;
 }
 h1{
-  margin: 0.625rem;
+  margin: .625rem;
 }
 
 .information{
   display: flex;
-  padding-left: 0.625rem;
+  padding-left: .625rem;
   flex-direction: row;
   align-items: center;
-  gap: 2rem;
+  gap: 32px;
 }
 
 .information a {
@@ -43,8 +43,8 @@ h1{
 }
 
 .information img {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 40px;
+  height: 40px;
 }
 
 .nav{
@@ -61,7 +61,7 @@ ul{
 li{
   display: block;
   float: left;
-  padding: 1rem;
+  padding: 16px;
   position: relative;
   text-decoration: none;
   transition-duration: 0.5s;
@@ -72,13 +72,13 @@ li ul {
   background: #188a1c;
   visibility: hidden;
   opacity: 0;
-  min-width: 15rem;
+  min-width: 240px;
   position: absolute;
   transition: all 0.5s ease;
-  margin-top: 1rem;
+  margin-top: 16px;
   left: 0;
   display: none;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem .5rem 1rem 0rem rgba(0, 0, 0, 0.2);
 }
 
 li ul li{
@@ -105,10 +105,10 @@ ul li:hover>ul, ul li:focus-within>ul, ul li ul:hover, ul li ul:focus {
 
 .click {
   display: flex;
-  padding-right: 4.7rem;
+  padding-right: 4.6875rem;
   flex-direction: row;
   align-items: center;
-  gap: 2rem;
+  gap: 32px;
 }
 
 .click a {
@@ -122,21 +122,21 @@ ul li:hover>ul, ul li:focus-within>ul, ul li ul:hover, ul li ul:focus {
 .click div {
   flex-direction: column;
   height: 1.25rem;
-  border-left: 0.2rem solid #ffffff;
+  border-left: .1875rem solid #ffffff;
 }
 .but-doacao {
   font-size: medium;
   display: flex;
   flex-wrap: wrap;
-  margin: 0.625rem;
+  margin: .625rem; 
   color: #ffff;
   justify-content: center;  
   text-decoration: none;
-  width: 15.6rem;
+  width: 15.625rem;
   border-radius: 2.5rem;
-  padding: 0.6rem;
+  padding: .5625rem;
   background: linear-gradient(to right, rgb(24, 138, 28) 39%, #062407 98%);
-  border: 0.06rem solid rgb(24, 138, 28);
+  border: .0625rem solid rgb(24, 138, 28);
   transition: all 0.5s ease-in-out;
 }
 section{
@@ -166,7 +166,7 @@ footer {
   display: flex;
   align-items: end;
   padding-bottom: 1.25rem;
-  letter-spacing: 0.15rem;
+  letter-spacing: 2.4px;
 }
 .but-envio{
   font-size: medium;
@@ -174,24 +174,24 @@ footer {
   flex-wrap: wrap;
   justify-content: center;  
   align-items: center;
-  margin: 0.625rem;
+  margin: .625rem;
   color: #ffff;
   text-decoration: none;
-  width: 10rem;
+  width: 6.25rem;
   border-radius: 2.5rem;
-  padding: 0.9rem;
+  padding: .8125rem;
   background: linear-gradient(to right, rgb(24, 138, 28) 39%, #062407 98%);
-  border: 1px solid rgb(24, 138, 28);
+  border: .0625rem solid rgb(24, 138, 28);
   transition: all 0.5s ease-in-out;    
 }
 img{
-  margin: 0.3rem;
+  margin: .3125rem;
 }
 figcaption{
   font-style: italic;
 }
 p{
-  margin-top: 1rem;
+  margin-top: .9375rem;
 }
 main{
   flex: 60%;
@@ -205,16 +205,15 @@ main{
 
 
 .denuncia h2{
-  margin-bottom: 1.9rem;
+  margin-bottom: 1.875rem;
 }
 select, textarea, #local, #date{
-  padding: 0.3rem;
-  width: 13.2rem;
-  margin: 0.32rem;
+  padding: .3125rem;
+  width: 13.125rem;
+  margin: .3125rem;
   border-radius: 3.75rem;
   background-color: #dedede;
   outline: 0;
-  border-color: 1px solid #d9d9d9;
   color: #000000;
 }
 .denuncia-doacao{
@@ -224,11 +223,13 @@ select, textarea, #local, #date{
   justify-content:flex-start;
   align-items: center;
   margin-top: 13vh;
-  border-left: 1rem solid rgb(58, 119, 58)
+  border-left: .9375rem solid rgb(58, 119, 58)
 }
 
-.doacao{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.but-envio:hover{
+  cursor: pointer;
+  filter: brightness(90%);
+}
+.but-doacao:hover{
+  filter: brightness(90%);
 }
