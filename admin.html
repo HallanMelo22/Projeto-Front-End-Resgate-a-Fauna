@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="./admin.css">
+  <title>Admin</title>
+</head>
+<body>
+  <div class="div_Mother">
+
+      <div class="title">
+      <h1 >ADMIN</h1>
+      <i class="fa-solid fa-user-tie"></i>
+      </div>
+
+      <div class="line"></div>
+      
+      <div class="cad">
+
+        <div class="title_cad">
+        <h1>CADASTRO DE USUÁRIOS</h1>
+        </div>
+
+          <form class="cad_form">
+            <div class="input_name">
+            <label for="name">Nome</label>
+              <div class="cad_name">
+                <input type="text" id="name" name="name">
+                <a href=""><i class="fa-solid fa-x"></i></a>
+              </div>
+            </div>
+            <div>
+              <label for="email">E-mail</label>
+              <div class="cad_password">
+              <input type="email" id="email" name="email" required>
+              <a href=""><i class="fa-solid fa-x"></i></a>
+              </div>
+            </div>
+            <div class="botton_cad">
+              <input class="cad" type="submit" value="Cadastrar Usuário" required>
+            </div>
+          </form>
+
+          <div class="line"></div>
+        
+      </div>
+
+      <div class="forms">
+
+      <div class="atribut">
+        <p>Data</p>
+        <p>Nome</p>
+        <p>E-mail</p>
+        </div>
+      
+      <div class="container">
+      <table>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+
+    <div class="X">
+      <a href=""><i class="fa-solid fa-circle-xmark"></i></a>
+      <a href=""><i class="fa-solid fa-circle-xmark"></i></a>
+      <a href=""><i class="fa-solid fa-circle-xmark"></i>
+      </div></a>
+    </div>
+
+    </div>
+
+    <div class="search_cad">
+      <h2>Pesquisa de Cadastros</h2>
+      <form class="search_input">
+        <div class="search_input_name">
+          <input type="text" id="name" name="name" placeholder="Nome...">
+          <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+        <div class="input_email">
+          <input type="email" id="email" name="email" placeholder="E-mail...">
+          <a href=""><i class="fa-solid fa-magnifying-glass"></i>
+          </div></a>
+        <div class="botton_excluid_list">
+          <input class="list" type="submit" value="Excluir Lista">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

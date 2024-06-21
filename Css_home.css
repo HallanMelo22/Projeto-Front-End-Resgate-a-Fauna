@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Kreon:wght@300..700&display=swap');
 
 * {
@@ -101,6 +100,20 @@ ul li:hover>ul, ul li:focus-within>ul, ul li ul:hover, ul li ul:focus {
   visibility: visible;
   opacity: 1;
   display: block;
+}
+
+.admin i{
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin p{
+  margin: 0.2rem;
+  font-family: 'Kreon';
+  color: #ffff;
+  font-size: 1rem;
 }
 
 .click {
