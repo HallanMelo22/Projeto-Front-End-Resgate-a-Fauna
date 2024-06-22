@@ -6,6 +6,7 @@
   <link rel="stylesheet" 
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="./admin.css">
+  <script src="./admin_script.js" defer></script>
   <title>Admin</title>
 </head>
 <body>
@@ -29,18 +30,18 @@
             <label for="name">Nome</label>
               <div class="cad_name">
                 <input type="text" id="name" name="name">
-                <a href=""><i class="fa-solid fa-x"></i></a>
+              <i class="fa-solid fa-x" onclick="clearInput('name')"></i>
               </div>
             </div>
             <div>
               <label for="email">E-mail</label>
               <div class="cad_password">
               <input type="email" id="email" name="email" required>
-              <a href=""><i class="fa-solid fa-x"></i></a>
+              <i class="fa-solid fa-x" onclick="clearInput('email')"></i>
               </div>
             </div>
             <div class="botton_cad">
-              <input class="cad" type="submit" value="Cadastrar Usuário" required>
+              <input class="cad" type="submit" value="Cadastrar Usuário" onclick="usuario.cadastrarUsuario()">
             </div>
           </form>
 
@@ -50,37 +51,22 @@
 
       <div class="forms">
 
-      <div class="atribut">
-        <p>Data</p>
-        <p>Nome</p>
-        <p>E-mail</p>
-        </div>
       
       <div class="container">
       <table>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-    </table>
+        <thead>
+          <tr>
+            <th class="center">Data</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th class="apagar">Excluir</th>
+          </tr>
+        </thead>
+      <tbody id="tbody">
 
-    <div class="X">
-      <a href=""><i class="fa-solid fa-circle-xmark"></i></a>
-      <a href=""><i class="fa-solid fa-circle-xmark"></i></a>
-      <a href=""><i class="fa-solid fa-circle-xmark"></i>
-      </div></a>
-    </div>
+      </tbody>
+      
+    </table>
 
     </div>
 
@@ -101,5 +87,12 @@
       </form>
     </div>
   </div>
+  <script>
+    function clearInput(id) {
+      document.getElementById(id).value = '';
+
+      console.log('Apertou')
+    }
+  </script>
 </body>
 </html>

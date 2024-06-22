@@ -107,8 +107,8 @@
 .botton_cad input{
   position: absolute;
   bottom: 0;
-  width: 15vw;
-  height: 6vh;
+  min-width: 17vw;
+  min-height: 6vh;
   background: linear-gradient(to right, #188A1C 39%, #062407 98%);
   border-radius: 1.875rem;
   border: none;
@@ -134,18 +134,6 @@
   margin-left: 1.5rem;
 }
 
-.X{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  font-size: 1.3rem;
-}
-
-.X a{
-  cursor: default;
-  color: #C83939;
-}
-
 .atribut{
   display: flex;
   flex-direction: row;
@@ -162,15 +150,23 @@
 }
 
 
-table, th, td{
+table, th, tr, td{
+  margin-top: 2rem;
   border: solid 0.1rem #188A1C;
   border-collapse: collapse;
+  color: #188A1C;
   width: 60rem;
   height: 2.5rem;
 }
 
-tr, th{
-  border: none;
+.icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: red; /* Define a cor do ícone como vermelho */
+}
+
+.center{
+  text-align: center;
 }
 
 .search_cad{
@@ -247,7 +243,6 @@ input::placeholder{
 }
 
 .botton_excluid_list input{
-  position: absolute;
   bottom: 5rem;
   margin-left: 3.5rem;
   width: 7.5vw;
