@@ -1,3 +1,6 @@
+var cadList = [];
+var count = 1;
+
 class Usuario {
   constructor () {
     this.arrayAdmin = [];
@@ -135,6 +138,15 @@ class Usuario {
       alert('Nenhum usuário selecionado para exclusão.');
     }
   }
+
+  
 }
 
 var usuario = new Usuario();
+
+function getCadList() {
+  var storedList = JSON.parse(localStorage.getItem('arrayAdmin')); //converte a string JSON para objeto JavaScript
+  arrayAdmin = storedList || []; //se storedList for um valor válido (não seja nulo ou indefinido). é atribuido a patientList. Caso contrário, patientList recebe um array vazio
+}
+
+getCadList();
