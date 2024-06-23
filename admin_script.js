@@ -9,6 +9,7 @@ class Usuario {
     let email = document.getElementById('email').value.trim();
 
     if (nome === '' || email === '') {
+      alert('Preencha os dois campos obrigatórios');
       return null;
     }
 
