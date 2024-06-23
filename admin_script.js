@@ -1,27 +1,21 @@
-var cadList = [];
-var count = 1;
-
 class Usuario {
   constructor () {
-    this.name = '';
-    this.email = '';
-    this.date = '';
-
     this.arrayAdmin = [];
   }
 
   lerValores(){
-    const form = document.querySelector('.cad_form');
+    let nome = document.getElementById('name').value.trim();
+    let email = document.getElementById('email').value.trim();
 
-    form.addEventListener('submit', function(event){
-      event.preventDefault();
-    });
-    
-    let cadastro = {};
-    
-    cadastro.nome_admin = document.getElementById('name').value;
-    cadastro.email_admin = document.getElementById('email').value;
-    cadastro.date = new Date().toLocaleString(); // Pega a data e hora atual
+    if (nome === '' || email === '') {
+      return null;
+    }
+
+    let cadastro = {
+      nome_admin: nome,
+      email_admin: email,
+      date: new Date().toLocaleString()
+    };
 
     return cadastro;
   }
@@ -30,21 +24,27 @@ class Usuario {
     this.arrayAdmin.push(cadastro);
   }
 
-  cadastrarUsuario (){
+  cadastrarUsuario(event) {
+    event.preventDefault();
+
     let cadastro = this.lerValores();
 
+    if (cadastro === null) {
+      alert('Por favor, preencha todos os campos.');
+      return;
+    }
+
     this.adicionarArray(cadastro);
-
     this.listarTabela();
-
-    this.limparDados();
+    this.limparName();
+    this.limparEmail();
   }
 
   listarTabela() {
     let tbody = document.getElementById('tbody');
-    tbody.innerText = ''; // Limpa a tabela antes de listar os valores atualizados
+    tbody.innerHTML = '';
 
-    for(let i = 0; i < this.arrayAdmin.length; i++){
+    this.arrayAdmin.forEach((admin, index) => {
       let tr = tbody.insertRow();
 
       let td_date = tr.insertCell();
@@ -52,9 +52,9 @@ class Usuario {
       let td_email = tr.insertCell();
       let td_acoes = tr.insertCell();
 
-      td_date.innerText = this.arrayAdmin[i].date;
-      td_nome.innerText = this.arrayAdmin[i].nome_admin;
-      td_email.innerText = this.arrayAdmin[i].email_admin;
+      td_date.innerText = admin.date;
+      td_nome.innerText = admin.nome_admin;
+      td_email.innerText = admin.email_admin;
 
       td_date.classList.add('center');
       td_nome.classList.add('center');
@@ -63,14 +63,16 @@ class Usuario {
 
       let icon = document.createElement('i');
       icon.classList.add('fa-solid', 'fa-circle-xmark', 'icon');
-      icon.addEventListener('click', () => this.excluirUsuario(i));
+      icon.addEventListener('click', () => this.excluirUsuario(index));
       td_acoes.appendChild(icon);
-    }
+    });
   }
 
-  
-  limparDados(){
+  limparName() {
     document.getElementById('name').value = '';
+  }
+
+  limparEmail() {
     document.getElementById('email').value = '';
   }
 
@@ -78,13 +80,61 @@ class Usuario {
     this.arrayAdmin.splice(index, 1);
     this.listarTabela();
   }
-}
 
-function getCadList() {
-  var storedList = JSON.parse(localStorage.getItem('arrayAdmin')); //converte a string JSON para objeto JavaScript
-  arrayAdmin = storedList || []; //se storedList for um valor válido (não seja nulo ou indefinido). é atribuido a patientList. Caso contrário, patientList recebe um array vazio
-}
+  excluirLista() {
+    this.arrayAdmin = [];
+    this.listarTabela();
+  }
 
-getCadList();
+  pesquisarUsuario(campo) {
+    const inputId = `search${campo.charAt(0).toUpperCase() + campo.slice(1)}`;
+    const valor = document.getElementById(inputId).value.toLowerCase().trim();
+
+    if (valor === '') {
+      alert('Por favor, digite um valor para pesquisar.');
+      this.listarTabela();
+      return;
+    }
+
+    let foundIndex = null;
+    this.arrayAdmin.forEach((admin, index) => {
+      if ((campo === 'name' && admin.nome_admin.toLowerCase().includes(valor)) ||
+          (campo === 'email' && admin.email_admin.toLowerCase().includes(valor))) {
+        foundIndex = index;
+      }
+    });
+
+    if (foundIndex !== null) {
+      this.marcarLinhaEncontrada(foundIndex);
+    } else {
+      alert('Nenhum usuário encontrado com esse critério de pesquisa.');
+      this.listarTabela();
+    }
+  }
+
+  marcarLinhaEncontrada(index) {
+    let tbody = document.getElementById('tbody');
+    let rows = tbody.getElementsByTagName('tr');
+
+    for (let i = 0; i < rows.length; i++) {
+      rows[i].classList.remove('destacado');
+    }
+
+    rows[index].classList.add('destacado');
+  }
+
+  excluirUsuarioEncontrado() {
+    let tbody = document.getElementById('tbody');
+    let highlightedRow = tbody.querySelector('.destacado');
+
+    if (highlightedRow) {
+      let index = Array.from(tbody.children).indexOf(highlightedRow);
+      this.arrayAdmin.splice(index, 1);
+      this.listarTabela();
+    } else {
+      alert('Nenhum usuário selecionado para exclusão.');
+    }
+  }
+}
 
 var usuario = new Usuario();

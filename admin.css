@@ -12,9 +12,6 @@
   gap: 2rem;
   margin-left: 1.5rem;
 }
-.title a{
-  align-items: flex-end;
-}
 
 .title h1{
   font-family: 'Kreon';
@@ -81,7 +78,7 @@
   font-family: 'Kreon';
 }
 
-.cad_password{
+.cad_email{
   display: flex;
   align-items: center;
   padding: .3125rem 1.25rem;
@@ -90,13 +87,13 @@
   border: solid 0.01rem #188A1C;
 }
 
-.cad_password i{
+.cad_email i{
   color: #188A1C;
   font-size: 1rem;
   cursor: default;
 }
 
-.cad_password input, input:focus{
+.cad_email input, input:focus{
   height: 1.5625rem;
   width: 35vh;
   border: 0rem;
@@ -170,6 +167,37 @@ table, th, tr, td{
 
 .center{
   text-align: center;
+}
+
+.destacado {
+  background-color: #ffd700; /* Amarelo */
+}
+
+.botton_excluir {
+  display: flex;
+  justify-content:end;
+  margin-right: 17rem;
+}
+
+.botton_excluir button{
+  margin-top: 3rem;
+  width: 17vw;
+  height: 6vh;
+  background: linear-gradient(to right, #188A1C 39%, #062407 98%);
+  border-radius: 1.875rem;
+  border: none;
+  color: #FFFFFF;
+  font-family: 'Kreon';
+  justify-content: center;
+  align-items: center;
+  font-size: .9375rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+
+.botton_excluir button:hover{
+  filter: brightness( 90% );
 }
 
 .search_cad{
