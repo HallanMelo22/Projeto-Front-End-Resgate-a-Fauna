@@ -1,12 +1,10 @@
-var cadList = [];
-var count = 1;
-
 class Usuario {
-  constructor () {
-    this.arrayAdmin = [];
+  constructor() {
+    this.arrayAdmin = this.getCadList();
+    this.listarTabela(); // Listar tabela ao iniciar
   }
 
-  lerValores(){
+  lerValores() {
     let nome = document.getElementById('name').value.trim();
     let email = document.getElementById('email').value.trim();
 
@@ -23,8 +21,9 @@ class Usuario {
     return cadastro;
   }
 
-  adicionarArray(cadastro){
+  adicionarArray(cadastro) {
     this.arrayAdmin.push(cadastro);
+    this.saveToLocalStorage();
   }
 
   cadastrarUsuario(event) {
@@ -81,11 +80,13 @@ class Usuario {
 
   excluirUsuario(index) {
     this.arrayAdmin.splice(index, 1);
+    this.saveToLocalStorage();
     this.listarTabela();
   }
 
   excluirLista() {
     this.arrayAdmin = [];
+    this.saveToLocalStorage();
     this.listarTabela();
   }
 
@@ -133,20 +134,20 @@ class Usuario {
     if (highlightedRow) {
       let index = Array.from(tbody.children).indexOf(highlightedRow);
       this.arrayAdmin.splice(index, 1);
+      this.saveToLocalStorage();
       this.listarTabela();
     } else {
       alert('Nenhum usuário selecionado para exclusão.');
     }
   }
 
-  
+  saveToLocalStorage() {
+    localStorage.setItem('arrayAdmin', JSON.stringify(this.arrayAdmin));
+  }
+
+  getCadList() {
+    return JSON.parse(localStorage.getItem('arrayAdmin')) || [];
+  }
 }
 
 var usuario = new Usuario();
-
-function getCadList() {
-  var storedList = JSON.parse(localStorage.getItem('arrayAdmin')); //converte a string JSON para objeto JavaScript
-  arrayAdmin = storedList || []; //se storedList for um valor válido (não seja nulo ou indefinido). é atribuido a patientList. Caso contrário, patientList recebe um array vazio
-}
-
-getCadList();
