@@ -12,6 +12,9 @@
   gap: 2rem;
   margin-left: 1.5rem;
 }
+.title a{
+  align-items: flex-end;
+}
 
 .title h1{
   font-family: 'Kreon';

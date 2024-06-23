@@ -1,3 +1,6 @@
+var cadList = [];
+var count = 1;
+
 class Usuario {
   constructor () {
     this.name = '';
@@ -65,6 +68,7 @@ class Usuario {
     }
   }
 
+  
   limparDados(){
     document.getElementById('name').value = '';
     document.getElementById('email').value = '';
@@ -75,5 +79,12 @@ class Usuario {
     this.listarTabela();
   }
 }
+
+function getCadList() {
+  var storedList = JSON.parse(localStorage.getItem('arrayAdmin')); //converte a string JSON para objeto JavaScript
+  arrayAdmin = storedList || []; //se storedList for um valor válido (não seja nulo ou indefinido). é atribuido a patientList. Caso contrário, patientList recebe um array vazio
+}
+
+getCadList();
 
 var usuario = new Usuario();
