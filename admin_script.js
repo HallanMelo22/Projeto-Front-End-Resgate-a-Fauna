@@ -12,6 +12,11 @@ class Usuario {
       return null;
     }
 
+    if (!this.validarEmail(email)) {
+      alert('Por favor, insira um e-mail válido.');
+      return null;
+    }
+
     let cadastro = {
       nome_admin: nome,
       email_admin: email,
@@ -19,6 +24,11 @@ class Usuario {
     };
 
     return cadastro;
+  }
+
+  validarEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
   }
 
   adicionarArray(cadastro) {
@@ -32,7 +42,11 @@ class Usuario {
     let cadastro = this.lerValores();
 
     if (cadastro === null) {
-      alert('Por favor, preencha todos os campos.');
+      return;
+    }
+
+    if (this.arrayAdmin.some(admin => admin.email_admin === cadastro.email_admin)) {
+      alert('E-mail já cadastrado.');
       return;
     }
 
@@ -80,7 +94,7 @@ class Usuario {
 
   excluirUsuario(index) {
     this.arrayAdmin.splice(index, 1);
-    this.saveToLocalStorage();
+    this.saveToLocalStorage(); // Salvar alterações no localStorage
     this.listarTabela();
   }
 
@@ -114,6 +128,9 @@ class Usuario {
       alert('Nenhum usuário encontrado com esse critério de pesquisa.');
       this.listarTabela();
     }
+
+    // Limpar campos de pesquisa após a operação
+    document.getElementById(inputId).value = '';
   }
 
   marcarLinhaEncontrada(index) {
@@ -134,11 +151,15 @@ class Usuario {
     if (highlightedRow) {
       let index = Array.from(tbody.children).indexOf(highlightedRow);
       this.arrayAdmin.splice(index, 1);
-      this.saveToLocalStorage();
+      this.saveToLocalStorage(); // Salvar alterações no localStorage
       this.listarTabela();
     } else {
       alert('Nenhum usuário selecionado para exclusão.');
     }
+
+    // Limpar campos de pesquisa após a operação
+    this.limparName();
+    this.limparEmail();
   }
 
   saveToLocalStorage() {

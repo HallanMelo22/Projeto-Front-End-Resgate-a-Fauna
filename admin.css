@@ -108,7 +108,7 @@
   font-family: 'Kreon';
 }
 
-.botton_cad input{
+.botton_cad button{
   position: absolute;
   bottom: 0;
   min-width: 17vw;
@@ -204,9 +204,6 @@ table, th, tr, td{
   filter: brightness( 90% );
 }
 
-.search_cad{
-  margin-left: 1.5rem;
-}
 
 .search_cad h2{
   font-family: 'Kreon';
@@ -277,15 +274,14 @@ input::placeholder{
   font-family: 'Kreon';
 }
 
-.botton_excluid_list input{
+.botton_excluid_list button{
   bottom: 5rem;
-  margin-left: 3.5rem;
-  width: 7.5vw;
+  margin-left: 1.7rem;
+  width: 13vw;
   height: 6vh;
   background: linear-gradient(to right, #188A1C 39%, #062407 98%);
   border-radius: 1.875rem;
   border: none;
-  transition: all 0.5s ease-in-out;
 }
 
 .list{
@@ -295,8 +291,4 @@ input::placeholder{
   align-items: center;
   font-size: .9375rem;
   cursor: pointer;
-}
-
-.list input:hover{
-  filter: brightness( 90% );
 }

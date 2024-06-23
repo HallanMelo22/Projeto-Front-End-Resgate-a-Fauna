@@ -39,7 +39,7 @@
           </div>
         </div>
         <div class="botton_cad">
-          <input class="cad" type="submit" value="Cadastrar Usuário" onclick="usuario.cadastrarUsuario(event)">
+          <button type="button" class="cad" onclick="usuario.cadastrarUsuario(event)">Cadastrar Usuário</button>
         </div>
       </form>
       <div class="line"></div>
@@ -68,7 +68,7 @@
 
       <div class="search_cad">
         <h2>Pesquisa de Cadastros</h2>
-        <form class="search_input">
+        <form class="search_input" onsubmit="usuario.excluirUsuarioEncontrado(); return false;">
           <div class="search_input_name">
             <input type="text" id="searchName" name="name" placeholder="Nome...">
             <a href="#" onclick="usuario.pesquisarUsuario('name')"><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -79,7 +79,7 @@
           </div>
           
           <div class="botton_excluid_list">
-            <input class="list" type="submit" value="Excluir Lista" onclick="usuario.excluirUsuarioEncontrado()">
+            <button type="button" class="list" onclick="usuario.excluirUsuarioEncontrado()">Excluir Linha Destacada</button>
           </div>
         </form>
       </div>
